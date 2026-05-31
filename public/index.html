@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Mississippi Title Research | Title Search & Abstractor Services</title>
+  <style>
+    :root{
+      --navy:#07172f;
+      --navy2:#0d2446;
+      --gold:#c99a2e;
+      --cream:#f6f0e5;
+      --white:#ffffff;
+      --gray:#627083;
+      --dark:#182235;
+      --line:#d8c7a2;
+      --green:#1f7a52;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--dark);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:white;padding:18px 6%;position:sticky;top:0;z-index:20;box-shadow:0 5px 20px rgba(0,0,0,.18)}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:1200px;margin:auto}
+    .brand{display:flex;align-items:center;gap:14px}
+    .seal{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-weight:900;color:var(--gold);font-size:20px;background:rgba(255,255,255,.05)}
+    .brand h1{font-size:22px;letter-spacing:.5px;line-height:1.1}
+    .brand small{color:#ddc98d;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+    nav ul{display:flex;list-style:none;gap:20px;font-family:Arial,sans-serif;font-size:14px}
+    nav a{color:#f8eed3;opacity:.95}
+    nav a:hover{color:var(--gold)}
+    .hero{background:linear-gradient(rgba(7,23,47,.86),rgba(7,23,47,.86)),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;color:white;padding:90px 6% 80px}
+    .hero-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+    .eyebrow{color:var(--gold);font-family:Arial,sans-serif;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+    .hero h2{font-size:54px;line-height:1.05;margin-bottom:20px}
+    .hero p{font-size:20px;max-width:670px;color:#f5ead0;margin-bottom:28px}
+    .buttons{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{font-family:Arial,sans-serif;font-weight:700;padding:14px 22px;border-radius:6px;display:inline-block;border:2px solid var(--gold)}
+    .btn.primary{background:var(--gold);color:#07172f}
+    .btn.secondary{color:#fff;background:rgba(255,255,255,.04)}
+    .hero-card{background:rgba(255,255,255,.96);color:var(--dark);padding:28px;border-radius:10px;border-top:6px solid var(--gold);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .hero-card h3{font-size:26px;color:var(--navy);margin-bottom:12px}
+    .check{list-style:none;font-family:Arial,sans-serif;color:#233047}
+    .check li{padding:9px 0;border-bottom:1px solid #eadfca}
+    .check li:before{content:'✓';color:var(--green);font-weight:bold;margin-right:9px}
+    section{padding:72px 6%}
+    .wrap{max-width:1200px;margin:auto}
+    .section-title{text-align:center;margin-bottom:38px}
+    .section-title span{color:var(--gold);font-family:Arial,sans-serif;font-weight:bold;text-transform:uppercase;letter-spacing:1.5px;font-size:13px}
+    .section-title h2{font-size:38px;color:var(--navy);margin-top:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #e4d8bf;border-radius:10px;padding:24px;box-shadow:0 10px 25px rgba(11,31,58,.08)}
+    .card h3{color:var(--navy);font-size:22px;margin-bottom:10px}
+    .price{font-family:Arial,sans-serif;color:var(--gold);font-size:24px;font-weight:900;margin:10px 0}
+    .card p,.card li{font-family:Arial,sans-serif;color:#4d5a6b;font-size:15px}
+    .card ul{padding-left:18px;margin-top:10px}
+    .dark{background:var(--navy);color:white}
+    .dark .section-title h2{color:white}
+    .dark .card{background:#10294d;border-color:#284568;color:white}
+    .dark .card h3{color:#f5dc9a}
+    .dark .card p,.dark .card li{color:#dbe6f3}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+    .panel{background:white;border-left:6px solid var(--gold);padding:30px;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.08)}
+    .panel h2{color:var(--navy);font-size:32px;margin-bottom:12px}
+    .panel p,.panel li{font-family:Arial,sans-serif;color:#4d5a6b;margin-bottom:10px}
+    .counties{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .county{background:white;border:1px solid #ddc58f;color:var(--navy);padding:10px 14px;border-radius:999px;font-family:Arial,sans-serif;font-weight:bold}
+    .form-box{background:white;padding:30px;border-radius:10px;box-shadow:0 12px 34px rgba(0,0,0,.12);border-top:6px solid var(--gold)}
+    label{display:block;font-family:Arial,sans-serif;font-weight:700;color:var(--navy);margin:14px 0 6px}
+    input,select,textarea{width:100%;padding:13px;border:1px solid #cfc5b2;border-radius:6px;font-size:15px;font-family:Arial,sans-serif;background:#fff}
+    textarea{min-height:110px}
+    .submit{margin-top:18px;width:100%;background:var(--navy);color:white;border:0;padding:15px;border-radius:6px;font-weight:bold;font-size:16px;cursor:pointer}
+    .sample{background:#fff;border:1px solid #d9caa7;border-radius:10px;padding:26px;font-family:Arial,sans-serif}
+    .sample h3{font-family:Georgia,serif;color:var(--navy);font-size:26px;text-align:center;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:15px}
+    table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+    th,td{border:1px solid #ddd;padding:9px;text-align:left}
+    th{background:#f1e6cd;color:var(--navy)}
+    footer{background:#061326;color:#d8e2ef;text-align:center;padding:30px 6%;font-family:Arial,sans-serif}
+    .disclaimer{font-size:13px;color:#aab8c8;margin-top:14px;max-width:900px;margin-left:auto;margin-right:auto}
+    @media(max-width:900px){.hero-inner,.two,.grid{grid-template-columns:1fr}.hero h2{font-size:39px}nav ul{display:none}.hero{padding-top:60px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="seal">TR</div>
+        <div><h1>North Mississippi Title Research</h1><small>Title Search • Abstracting • Property Research</small></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+          <li><a href="#sample">Sample Report</a></li>
+          <li><a href="#order">Order</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Amory, Mississippi • Monroe County Specialist</div>
+        <h2>Local title research you can trust.</h2>
+        <p>Fast, organized property research for attorneys, real estate investors, lenders, and title companies across North Mississippi.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#order">Order a Search</a>
+          <a class="btn secondary" href="#services">View Services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Research Focus</h3>
+        <ul class="check">
+          <li>Monroe County land records</li>
+          <li>Tax sale and redemption history</li>
+          <li>Chain of title review</li>
+          <li>Judgment, lien, and UCC checks</li>
+          <li>FEMA flood zone determinations</li>
+          <li>Investor due diligence reports</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-title"><span>Services & Pricing</span><h2>Property Research Packages</h2></div>
+      <div class="grid">
+        <div class="card"><h3>Full 40-Year Title Search</h3><div class="price">$150–$275</div><p>Deeds, mortgages, liens, judgments, tax issues, easements, and ownership chain review.</p></div>
+        <div class="card"><h3>Chain of Title Search</h3><div class="price">$250–$400</div><p>Extended ownership history for attorneys, estates, quiet title matters, and complex parcels.</p></div>
+        <div class="card"><h3>Current Owner Search</h3><div class="price">$75–$125</div><p>Quick current owner verification with basic deed and encumbrance review.</p></div>
+        <div class="card"><h3>Tax Sale Research</h3><div class="price">$50–$100</div><p>Delinquent taxes, tax sale history, purchaser information, redemption status, and tax concerns.</p></div>
+        <div class="card"><h3>Judgment & Lien Search</h3><div class="price">$50–$85</div><p>Judgments, state/federal tax liens, UCC filings, mortgages, and other recorded claims.</p></div>
+        <div class="card"><h3>Flood Zone Determination</h3><div class="price">$25–$50</div><p>FEMA flood map review for lenders, investors, buyers, and property due diligence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="dark">
+    <div class="wrap two">
+      <div class="panel">
+        <h2>Built From Real Courthouse Experience</h2>
+        <p>This business is based on hands-on research through Monroe County property records, Chancery Clerk land records, FEMA flood maps, tax sale history, and title defect investigations.</p>
+        <p>That experience gives clients practical, local insight into the problems that can affect property ownership before money changes hands.</p>
+      </div>
+      <div class="panel">
+        <h2>Who We Help</h2>
+        <ul>
+          <li>Real estate attorneys</li>
+          <li>Tax sale investors</li>
+          <li>Land buyers and land flippers</li>
+          <li>Probate and estate attorneys</li>
+          <li>Mortgage brokers and lenders</li>
+          <li>Title companies needing overflow abstracting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="coverage">
+    <div class="wrap">
+      <div class="section-title"><span>Coverage Area</span><h2>Serving North Mississippi</h2></div>
+      <div class="counties">
+        <div class="county">Monroe County</div><div class="county">Amory</div><div class="county">Aberdeen</div><div class="county">Lee County</div><div class="county">Itawamba County</div><div class="county">Chickasaw County</div><div class="county">Lowndes County</div><div class="county">Pontotoc County</div><div class="county">Union County</div><div class="county">Prentiss County</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sample" class="dark">
+    <div class="wrap">
+      <div class="section-title"><span>Sample Deliverable</span><h2>How Customer Reports Look</h2></div>
+      <div class="sample">
+        <h3>TITLE SEARCH REPORT / ABSTRACT</h3>
+        <p><b>Report Number:</b> TSR-2026-001 &nbsp; | &nbsp; <b>County:</b> Monroe County, Mississippi</p>
+        <p><b>Parcel ID:</b> 3610-12-000-010.00 &nbsp; | &nbsp; <b>Search Period:</b> 40 Years</p>
+        <table>
+          <tr><th>Section</th><th>Information Included</th></tr>
+          <tr><td>Property Identification</td><td>Address, parcel number, owner, legal description, acreage</td></tr>
+          <tr><td>Ownership Chain</td><td>Grantor, grantee, recording dates, book/page references</td></tr>
+          <tr><td>Liens & Encumbrances</td><td>Mortgages, judgments, UCC filings, easements, restrictions</td></tr>
+          <tr><td>Tax Status</td><td>Current taxes, delinquency, tax sale history, redemption status</td></tr>
+          <tr><td>Flood Zone</td><td>FEMA map panel, effective date, flood zone rating</td></tr>
+          <tr><td>Exceptions</td><td>Missing links, probate concerns, unreleased liens, tax sale warnings</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="wrap two">
+      <div>
+        <div class="section-title" style="text-align:left;margin-bottom:20px"><span>Order a Search</span><h2>Send Property Details</h2></div>
+        <p style="font-family:Arial,sans-serif;color:#4d5a6b;margin-bottom:18px">Use this form layout on your live website so customers can submit a parcel number, county, owner name, and search type.</p>
+        <div class="card">
+          <h3>Recommended Intake Info</h3>
+          <ul>
+            <li>Client name and company</li>
+            <li>Email and phone number</li>
+            <li>Property address</li>
+            <li>Parcel number / PPIN</li>
+            <li>County</li>
+            <li>Requested search type</li>
+            <li>Needed turnaround date</li>
+          </ul>
+        </div>
+      </div>
+      <form class="form-box" action="https://formspree.io/f/xaqkzaaw" method="POST">
+        <label>Client Name</label><input type="text" placeholder="Your name or company" name="name" />
+        <label>Email</label><input type="email" placeholder="email@example.com" name="email" />
+        <label>Property Address</label><input type="text" placeholder="Street address" name="address" />
+        <label>Parcel Number / PPIN</label><input type="text" placeholder="Parcel ID or PPIN" name="parcel" />
+        <label>County</label><input type="text" placeholder="Monroe County, MS" name="county" />
+        <label>Search Type</label><select><option>Full 40-Year Title Search</option><option>Chain of Title</option><option>Current Owner Search</option><option>Tax Sale Research</option><option>Lien / Judgment Search</option><option>Flood Zone Determination</option></select>
+        <label>Notes</label><textarea placeholder="Tell us anything important about the property."></textarea>
+        <button class="submit" type="submit">Submit Search Request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <h3>North Mississippi Title Research</h3>
+    <p>Amory, Mississippi • Monroe County • Serving Attorneys, Investors, Lenders & Title Professionals</p>
+    <p class="disclaimer">Disclaimer: This website is for title research and public record reporting services only. Reports are factual research tools and do not constitute legal advice, a title opinion, title insurance, or a closing service.</p>
+  </footer>
+</body>
+</html>

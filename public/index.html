@@ -233,78 +233,93 @@
     <p class="disclaimer">Disclaimer: This website is for title research and public record reporting services only. Reports are factual research tools and do not constitute legal advice, a title opinion, title insurance, or a closing service.</p>
   </footer>
 
+
 <!-- MAGNOLIA CHAT WIDGET -->
 <style>
-#magnolia-chat-widget{position:fixed;bottom:28px;right:28px;z-index:9999;font-family:'Lato',sans-serif}
-#magnolia-toggle{width:62px;height:62px;border-radius:50%;background:linear-gradient(145deg,#2c4a2e,#1e3320);border:2px solid #c8a96e55;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px #2c4a2e55;transition:all .3s ease;position:relative}
-#magnolia-toggle:hover{transform:scale(1.06);border-color:#c8a96e99}
-#magnolia-notif{position:absolute;top:2px;right:2px;width:14px;height:14px;background:#c8a96e;border-radius:50%;border:2px solid #f5f0e8;display:none}
-#magnolia-box{position:absolute;bottom:76px;right:0;width:340px;background:#faf7f2;border:1px solid #c8a96e55;border-radius:16px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 20px 60px #00000022}
+#magnolia-chat-widget{position:fixed;bottom:28px;right:28px;z-index:9999;font-family:Lato,sans-serif}
+#magnolia-toggle{width:62px;height:62px;border-radius:50%;background:linear-gradient(145deg,#2c4a2e,#1e3320);border:2px solid rgba(200,169,110,.33);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(44,74,46,.33);transition:all .3s;position:relative}
+#magnolia-toggle:hover{transform:scale(1.06)}
+#dc-notif2{position:absolute;top:2px;right:2px;width:14px;height:14px;background:#c8a96e;border-radius:50%;border:2px solid #f5f0e8;display:none}
+#magnolia-box{position:absolute;bottom:76px;right:0;width:320px;background:#faf7f2;border:1px solid rgba(200,169,110,.33);border-radius:16px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.13)}
 #magnolia-box.open{display:flex}
-#magnolia-header{background:linear-gradient(145deg,#2c4a2e,#1e3320);padding:16px 18px;display:flex;align-items:center;gap:12px}
-.mg-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#c8a96e,#a88840);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.mg-hname{font-size:14px;color:#f5f0e8;font-weight:600}
-.mg-hsub{font-size:10px;color:#c8a96e;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
-.mg-xbtn{background:none;border:none;color:#f5f0e855;cursor:pointer;font-size:18px;margin-left:auto;padding:2px 6px}
-.mg-sbar{background:#2c4a2e22;border-bottom:1px solid #c8a96e22;padding:7px 18px;font-size:10px;color:#2c4a2e;display:flex;align-items:center;gap:6px}
-.mg-dot{width:7px;height:7px;background:#4caf50;border-radius:50%;animation:mg-blink 2s infinite}
-@keyframes mg-blink{0%,100%{opacity:1}50%{opacity:.3}}
-#mg-name-row{display:flex;gap:8px;padding:12px 14px 0;background:#faf7f2}
-.mg-inp{flex:1;background:#fff;border:1px solid #c8a96e44;color:#2c2c2c;padding:9px 12px;border-radius:8px;font-size:12px;font-family:inherit;outline:none}
-.mg-inp::placeholder{color:#9a8a7a;font-style:italic}
-#mg-messages{flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;max-height:240px}
-.mg-msg{max-width:84%;padding:10px 14px;border-radius:12px;font-size:12.5px;line-height:1.55}
-.mg-msg.bot{background:#fff;border:1px solid #c8a96e33;color:#3a3228;align-self:flex-start;border-bottom-left-radius:4px}
-.mg-msg.user{background:linear-gradient(145deg,#2c4a2e,#1e3320);color:#f5f0e8;align-self:flex-end;border-bottom-right-radius:4px}
-.mg-msg.ok{background:#f0f7f0;border:1px solid #4caf5044;color:#2c4a2e;font-size:11px;align-self:center;text-align:center;border-radius:8px;max-width:95%;font-style:italic}
-#mg-quick{display:flex;gap:6px;padding:0 14px 10px;flex-wrap:wrap}
-.mg-q{background:#fff;border:1px solid #c8a96e55;color:#2c4a2e;padding:5px 10px;border-radius:20px;font-size:10.5px;cursor:pointer;font-family:inherit}
+#mg-header{background:linear-gradient(145deg,#2c4a2e,#1e3320);padding:16px 18px;display:flex;align-items:center;gap:12px}
+.mg-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#c8a96e,#a88840);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.mg-hn{font-size:13px;color:#f5f0e8;font-weight:700}
+.mg-hs{font-size:10px;color:#c8a96e;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+.mg-xb{background:none;border:none;color:rgba(245,240,232,.33);cursor:pointer;font-size:18px;margin-left:auto}
+.mg-xb:hover{color:#f5f0e8}
+.mg-sb{background:rgba(44,74,46,.13);border-bottom:1px solid rgba(200,169,110,.13);padding:7px 18px;font-size:10px;color:#2c4a2e;display:flex;align-items:center;gap:6px}
+.mg-sd{width:7px;height:7px;background:#4caf50;border-radius:50%;animation:mg-bl 2s infinite}
+@keyframes mg-bl{0%,100%{opacity:1}50%{opacity:.3}}
+#mg-nr{display:flex;gap:8px;padding:12px 14px 0;background:#faf7f2}
+.mg-in{flex:1;background:#fff;border:1px solid rgba(200,169,110,.27);color:#2c2c2c;padding:9px 12px;border-radius:8px;font-size:12px;font-family:inherit;outline:none}
+.mg-in::placeholder{color:#9a8a7a}
+#mg-msgs{flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;max-height:220px}
+.mg-m{max-width:84%;padding:10px 14px;border-radius:12px;font-size:12px;line-height:1.5}
+.mg-m.bot{background:#fff;border:1px solid rgba(200,169,110,.2);color:#3a3228;align-self:flex-start;border-bottom-left-radius:4px}
+.mg-m.usr{background:linear-gradient(145deg,#2c4a2e,#1e3320);color:#f5f0e8;align-self:flex-end;border-bottom-right-radius:4px}
+.mg-m.ok{background:#f0f7f0;border:1px solid rgba(76,175,80,.27);color:#2c4a2e;font-size:11px;align-self:center;text-align:center;border-radius:8px;max-width:95%}
+#mg-qk{display:flex;gap:6px;padding:0 14px 10px;flex-wrap:wrap}
+.mg-q{background:#fff;border:1px solid rgba(200,169,110,.33);color:#2c4a2e;padding:5px 10px;border-radius:20px;font-size:10px;cursor:pointer;font-family:inherit}
 .mg-q:hover{background:#2c4a2e;color:#f5f0e8}
-#mg-input-area{border-top:1px solid #c8a96e22;padding:12px 14px;display:flex;gap:8px;align-items:flex-end;background:#faf7f2}
-#mg-input{flex:1;background:#fff;border:1px solid #c8a96e44;color:#2c2c2c;padding:10px 12px;border-radius:10px;font-size:12.5px;font-family:inherit;resize:none;outline:none;min-height:40px;max-height:90px}
-#mg-send{background:linear-gradient(145deg,#2c4a2e,#1e3320);border:1px solid #c8a96e33;color:#c8a96e;width:40px;height:40px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mg-typing{display:flex;gap:4px;align-items:center;padding:10px 14px;background:#fff;border:1px solid #c8a96e33;border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start;width:fit-content}
-.mg-typing span{width:5px;height:5px;background:#c8a96e;border-radius:50%;animation:mg-t 1.2s infinite}
-.mg-typing span:nth-child(2){animation-delay:.2s}
-.mg-typing span:nth-child(3){animation-delay:.4s}
+#mg-ia{border-top:1px solid rgba(200,169,110,.13);padding:12px 14px;display:flex;gap:8px;align-items:flex-end;background:#faf7f2}
+#mg-inp{flex:1;background:#fff;border:1px solid rgba(200,169,110,.27);color:#2c2c2c;padding:10px 12px;border-radius:10px;font-size:12px;font-family:inherit;resize:none;outline:none;min-height:40px;max-height:90px}
+#mg-inp::placeholder{color:#9a8a7a}
+#mg-snd{background:linear-gradient(145deg,#2c4a2e,#1e3320);border:1px solid rgba(200,169,110,.2);color:#c8a96e;width:40px;height:40px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mg-ty{display:flex;gap:4px;align-items:center;padding:10px 14px;background:#fff;border:1px solid rgba(200,169,110,.2);border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start;width:fit-content}
+.mg-ty span{width:5px;height:5px;background:#c8a96e;border-radius:50%;animation:mg-t 1.2s infinite}
+.mg-ty span:nth-child(2){animation-delay:.2s}.mg-ty span:nth-child(3){animation-delay:.4s}
 @keyframes mg-t{0%,60%,100%{transform:translateY(0);opacity:.3}30%{transform:translateY(-5px);opacity:1}}
-.mg-foot{text-align:center;font-size:9px;color:#9a8a7a;padding:6px;letter-spacing:1.5px;text-transform:uppercase;border-top:1px solid #c8a96e11}
+.mg-ft{text-align:center;font-size:9px;color:#9a8a7a;padding:6px;letter-spacing:1px;text-transform:uppercase;border-top:1px solid rgba(200,169,110,.07)}
 </style>
 <div id="magnolia-chat-widget">
-<button id="magnolia-toggle" aria-label="Chat" onclick="mgToggle()"><div id="magnolia-notif"></div><span id="mg-io" style="font-size:26px">ð¸</span><span id="mg-ic" style="display:none;font-size:20px;color:#c8a96e">â</span></button>
+<button id="magnolia-toggle" aria-label="Chat" onclick="mgT()">
+<div id="dc-notif2"></div>
+<span id="mg-io" style="font-size:24px;line-height:1">&#x1F338;</span>
+<span id="mg-ic" style="display:none;color:#c8a96e;font-size:20px;font-weight:700">X</span>
+</button>
 <div id="magnolia-box">
-<div id="magnolia-header"><div class="mg-avatar">ð¸</div><div><div class="mg-hname">Magnolia Title Services</div><div class="mg-hsub">North Mississippi</div></div><button class="mg-xbtn" onclick="mgToggle()">â</button></div>
-<div class="mg-sbar"><div class="mg-dot"></div>Available now</div>
-<div id="mg-name-row"><input class="mg-inp" id="mg-name" placeholder="Your name"/><input class="mg-inp" id="mg-phone" placeholder="Phone or email" style="flex:1.4"/></div>
-<div id="mg-messages"><div class="mg-msg bot">Good day! How can Magnolia Title Services assist you? ð¸</div></div>
-<div id="mg-quick"><button class="mg-q" onclick="mgQ('I need a title search')">ð Title Search</button><button class="mg-q" onclick="mgQ('What are your rates?')">ð² Rates</button><button class="mg-q" onclick="mgQ('What counties do you cover?')">ðºï¸ Coverage</button><button class="mg-q" onclick="mgQ('I am an attorney looking to partner')">âï¸ Attorney</button></div>
-<div id="mg-input-area"><textarea id="mg-input" placeholder="Type your messageâ¦" rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();mgSend()}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,90)+'px'"></textarea><button id="mg-send" onclick="mgSend()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-<div class="mg-foot">Magnolia Title Services Â· Monroe County, MS</div>
+<div id="mg-header">
+<div class="mg-av">&#x1F338;</div>
+<div><div class="mg-hn">Magnolia Title Services</div><div class="mg-hs">North Mississippi</div></div>
+<button class="mg-xb" onclick="mgT()">X</button>
+</div>
+<div class="mg-sb"><div class="mg-sd"></div>Available now &mdash; We respond quickly</div>
+<div id="mg-nr"><input class="mg-in" id="mg-nm" placeholder="Your name"/><input class="mg-in" id="mg-ph" placeholder="Phone or email" style="flex:1.4"/></div>
+<div id="mg-msgs"><div class="mg-m bot">Good day! How can Magnolia Title Services assist you today?</div></div>
+<div id="mg-qk">
+<button class="mg-q" onclick="mgQ('I need a title search')">Title Search</button>
+<button class="mg-q" onclick="mgQ('What are your rates?')">Rates</button>
+<button class="mg-q" onclick="mgQ('What counties do you cover?')">Coverage</button>
+<button class="mg-q" onclick="mgQ('I am an attorney looking to partner')">Attorney Partner</button>
+</div>
+<div id="mg-ia">
+<textarea id="mg-inp" placeholder="Type your message..." rows="1" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();mgS()}" oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,90)+'px'"></textarea>
+<button id="mg-snd" onclick="mgS()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="#c8a96e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+<div class="mg-ft">Magnolia Title Services &middot; Monroe County, MS</div>
 </div>
 </div>
 <script>
 (function(){
-var open=false;
-setTimeout(function(){if(!open)document.getElementById('magnolia-notif').style.display='block'},5000);
-window.mgToggle=function(){open=!open;var b=document.getElementById('magnolia-box');var io=document.getElementById('mg-io');var ic=document.getElementById('mg-ic');if(open){b.classList.add('open');document.getElementById('magnolia-notif').style.display='none';io.style.display='none';ic.style.display='block';document.getElementById('mg-name').focus()}else{b.classList.remove('open');io.style.display='block';ic.style.display='none'}};
-window.mgQ=function(t){document.getElementById('mg-input').value=t;mgSend()};
-function mgMsg(t,c){var d=document.getElementById('mg-messages');var m=document.createElement('div');m.className='mg-msg '+c;m.textContent=t;d.appendChild(m);d.scrollTop=d.scrollHeight}
-function mgTyping(){var d=document.getElementById('mg-messages');var t=document.createElement('div');t.className='mg-typing';t.id='mg-typ';t.innerHTML='<span><\/span><span><\/span><span><\/span>';d.appendChild(t);d.scrollTop=d.scrollHeight}
-function mgRmTyping(){var t=document.getElementById('mg-typ');if(t)t.remove()}
-window.mgSend=function(){
-var inp=document.getElementById('mg-input');
-var name=document.getElementById('mg-name').value.trim()||'Visitor';
-var phone=document.getElementById('mg-phone').value.trim()||'Not provided';
-var txt=inp.value.trim();
-if(!txt)return;
-document.getElementById('mg-quick').style.display='none';
-mgMsg(txt,'user');inp.value='';inp.style.height='auto';mgTyping();
+var op=false;
+setTimeout(function(){if(!op)document.getElementById('dc-notif2').style.display='block'},5000);
+window.mgT=function(){op=!op;var b=document.getElementById('magnolia-box');var io=document.getElementById('mg-io');var ic=document.getElementById('mg-ic');if(op){b.classList.add('open');document.getElementById('dc-notif2').style.display='none';io.style.display='none';ic.style.display='block';document.getElementById('mg-nm').focus()}else{b.classList.remove('open');io.style.display='block';ic.style.display='none'}};
+window.mgQ=function(t){document.getElementById('mg-inp').value=t;mgS()};
+function mgM(t,c){var d=document.getElementById('mg-msgs');var m=document.createElement('div');m.className='mg-m '+c;m.textContent=t;d.appendChild(m);d.scrollTop=d.scrollHeight}
+function mgTy(){var d=document.getElementById('mg-msgs');var t=document.createElement('div');t.className='mg-ty';t.id='mg-typ';t.innerHTML='<span></span><span></span><span></span>';d.appendChild(t);d.scrollTop=d.scrollHeight}
+function mgRt(){var t=document.getElementById('mg-typ');if(t)t.remove()}
+window.mgS=function(){
+var inp=document.getElementById('mg-inp');
+var nm=document.getElementById('mg-nm').value.trim()||'Visitor';
+var ph=document.getElementById('mg-ph').value.trim()||'Not provided';
+var tx=inp.value.trim();if(!tx)return;
+document.getElementById('mg-qk').style.display='none';
+mgM(tx,'usr');inp.value='';inp.style.height='auto';mgTy();
 var ts=new Date().toLocaleString('en-US',{timeZone:'America/Chicago'});
-var body='ð¸ MAGNOLIA TITLE NEW CHAT\nFrom: '+name+'\nContact: '+phone+'\nTime: '+ts+' CST\n---\n'+txt;
-fetch('https://dubcoreai-receptionist.onrender.com/notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,contact:phone,message:txt,business:'Magnolia Title Services'})}).catch(function(){});
-fetch('https://formspree.io/f/meedwnoq',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,contact:phone,message:txt,_subject:'Magnolia Title Chat: '+name})}).catch(function(){});
-var r=['Thank you '+name.split(' ')[0]+'! Message sent. We will follow up at '+phone+' shortly.','We appreciate you reaching out! Magnolia Title Services will be in touch soon.','Message received! We cover 7 north Mississippi counties and will reply promptly.'];
-setTimeout(function(){mgRmTyping();mgMsg(r[Math.floor(Math.random()*r.length)],'bot');mgMsg('Message sent - we will be in touch soon','ok')},2000);
+fetch('https://dubcoreai-receptionist.onrender.com/notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,contact:ph,message:tx,business:'Magnolia Title Services'})}).catch(function(){});
+var r=['Thank you '+nm.split(' ')[0]+'! Your message has been sent. We will follow up at '+ph+' shortly.','We appreciate you reaching out! Magnolia Title Services will be in touch soon.','Message received! We cover 7 north Mississippi counties and will reply promptly.'];
+setTimeout(function(){mgRt();mgM(r[Math.floor(Math.random()*r.length)],'bot');mgM('Message sent - we will be in touch soon','ok')},2000);
 };
 })();
 </script>
